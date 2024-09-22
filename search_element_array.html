@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEARCHING ELEMENT</title>
+    <script>
+        // THIS IS FOR SEARCHING ELEMENT IN THE ARRAY
+        let data=[10,20,30,40,50];
+        let ele=30;
+        let found=false;
+        function searches()
+        {
+        for(let i=0;i<data.length;i++)
+    {
+        if(data[i]===ele)
+    {
+        found=true;
+        document.write("WE FOUND IT IN THE ARRAY");
+    }
+    }
+}
+    </script>
+</head>
+<body>
+    <button onclick="searches()">CLICK TO SEE RESULT</button>
+</body>
+</html>
