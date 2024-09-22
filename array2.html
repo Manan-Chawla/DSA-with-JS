@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title></title>
+    <script>
+        // this is one of the most vital question in terms of Array
+        // as this question asked to insert a element at specific position 
+        // without using the inbuilt functions
+        let data=[10,20,30,40,50];
+        let newele=25;
+        let pos=2;
+        for(let i=data.length-1;i>=0;i--)
+    {
+        console.warn(`${i} : element -->`,data[i]);
+        if(i>=pos)
+    {
+        data[i+1]=data[i];
+        data[i]=newele;
+    }
+    }
+    console.log(`${data}`);
+    </script>
+</head>
+<body>
+            
+</body>
+</html>

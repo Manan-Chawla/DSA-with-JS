@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let data = [10, 20, 30, 40, 50];
+      for (let i = 0; i < data.length; i++) {
+        //normal traversing of array
+        document.write(`ARRAY ELEMENT ${i}: ${data[i]}<br/>`);
+      }
+
+      //accessing element using index value
+      document.write(`ARRAY element at index 3 : `,data[3],`<br/>`);
+
+      // this will fetch the element of data array
+      // if user entered more than index available then it will show undefined error
+      function getele()
+      {
+       let el=document.getElementById('ele').value;
+       alert(data[el]);
+      }
+
+      function checks() {
+        let e2 = document.getElementById('found').value;
+        let found = false; 
+        for (let i = 0; i < data.length; i++) {
+          if (parseInt(e2) === data[i]) {
+            found = true;
+            break; 
+          }
+        }
+
+        if (found) {
+          alert('Found it!');
+        } else {
+          alert('Not found');
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" id="ele" />
+    <button onclick="getele()">GET ELEMENT</button>
+
+    <br/><br/>
+
+    <input type="text" id="found" placeholder="Enter value to search" />
+    <button onclick="checks()">CLICK TO GET CHECKED</button>
+  </body>
+</html>
