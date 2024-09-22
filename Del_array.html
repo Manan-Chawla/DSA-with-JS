@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>REMOVING ELEMENT</title>
+    <script>
+
+      // removing element from specific position in the array
+      let data = [10, 20, 30, 40, 50];
+      let pos = 2;
+
+      function removes() {
+        data[pos] = null;
+        document.getElementById('one').innerHTML = data;
+      }
+    </script>
+  </head>
+  <body>
+    <!-- This question explain how to remove the value from a specific position in an
+     array and how to call the value in an html tag -->
+    <button onclick="removes()">CLICK HERE</button>
+    <h2 id="one"></h2>
+  </body>
+</html>
+
