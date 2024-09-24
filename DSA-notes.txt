@@ -1,0 +1,346 @@
+# Data --> Data is raw based information which is collected by us.
+           This may be collected in form of character, word and even
+           numbers.
+  Data also refer as single unit of values, on behalf of that we further divide it
+  in two parts:-
+  A. Group data items :- Those data which can be divide or classified in further.
+  B. Elementary data items :- Those data which can't be divide any futher.
+
+# Storage of Data :-
+  a. data should be organized and mainted 
+  b. data should be support many format
+  c. data should be retained
+  d. data should be reusable 
+
+# Data organization :-
+  ENITIY------FIELD-----RECORD----FILES 
+
+# Data Structure:-
+  The oraganized collection of data in mathmatical or logical way is called 
+  as data strucutre.
+  There are two major types of it:-
+  A. Linear data structure :-  ARRAY,STRING,LINKED-LIST,STACK,QUEUE
+  B. Non Linear data structure :- GRAPH,TREE,HASH,HEAP
+
+
+# Array:-
+  It refer as a linear or sequential data structure as it stored data in linear manner
+  Each element of array have it's own index value and these value always start from 0 
+  instead of 1.
+  Typically there are two types of array :-
+  A. 1-D array:
+     It also known as single , subscript and linear array
+     syntax:  data_type arr_name[size]={element};
+  
+  B. 2-D array:
+     It also known as tabluar, two-subscript and matrix array.
+     Each element have two index one is for row and another is for column.
+     syntax:  data_type arr_name[rowsize][columnsize]={element};
+
+   Ex: include<iostream> 
+       using namespace std; 
+       int main() 
+        {
+           int arr[]={10,20,30,40};
+           cout<<arr[0]; // this will access the first element
+           for(int i=0;i<arr.size();i++)
+              {
+               cout<<arr[i]<<endl;
+              }
+             return 0;
+         }
+
+
+
+# String:-
+  String defind as array of character or collection of array, which means we can access
+  each element of array just like we access in array.
+  for creating string we need to use 'String' keyword.
+  A string with length 0 is called as Null or empty string which is typically noted or called
+  as Null String.
+  Always rememeber that total number of character in array is always 1 more than string length.
+  there are some string handling function:-
+   * strcat() -> by this we can join two string
+   * strcmp() -> by this we can compare two string
+   * strcpy() -> by this we can copy two string
+   * strlen() -> by this we can find lenght of two string
+   * strrev() -> by this we can reverse string
+   * strlwr() -> by this we can converte string to lowercase
+   * strupr() -> by this we can converte string to uppercase
+
+
+# Linked list:-
+  A linked list is a ordered collection of data in which each element contain location of next element
+  which means each element have two part: one is for data and another is for link
+  Data part hold useful information about the data and link part used to chain data together.
+  It contains pointer that identitfies next node in the list.
+  Common structure of linked list:-
+  Struct node{
+                int data;
+                struct node*next;
+              }
+   
+   TYPES OF LINKED LIST:-
+   A. Single linked list:- It is an undirectional linked list, they are often used in algo that need to process
+      list of item in reverse order.
+   B. Doubly linked list:- It is bidirectional linked list, it contain one extra pointer as previous pointer and
+      the point to previous node.
+   c. Circular linked list:- It is unidirectional linked list, it can traverse in only one direction whether 
+      its forward or backward. It has no begining and no end , we can refer it as ring of nodes.
+   D. Circular doubly linked list:- It refer as the mixture of doubly and circular linked list and also allow for
+      easy movement and quick traverse of data store in list without need for special case handling.
+  
+   ** Advantage of using linked list:-
+      1. It can grow or shrink dynamically
+      2. It can make efficient use of memory
+      3. It offer flexibility
+      4. It can be modify easily for implementing various data structure
+      5. It does not suffer memory storage
+   
+   ** Disadvantage of using linked list:-
+      1. Does not provide random or direct access to element.
+      2. Require additional memory to store pointer.
+      3. Does not exibit good cache quality
+      4. Difficult to manange large number of node
+      5. Each node need extra memory to store pointer
+
+   ** Operation of Linked list:-
+      A. Insertion:-
+         It involve adding new node at a specific position or at the end of the list.
+      B. Deletion:-
+         It involve removing node from a specific position or anywhere in the list.
+      C. Traversing:-
+         It involve visiting each node in the list end performing some operation if needed.
+      D. Sorting:-
+         It involve arranging node in specific order such as ascending or descending order.
+      E. Searching:-
+         It involve finding value or node in the list.
+
+# Stack:-
+  A stack is straight information structure that follow LIFO or Last In First Out guidline. It contains just a pointer
+  called as top pointer which highlights the first component of the stack.
+  At whatever point a component is included stack it is added on highest point of the stack and component which can be 
+  earsed uniquely from the stack.
+
+  ** Stack operation:-
+     A. push()       ->when we embed a component in stack than it called as push
+     B. pop()        ->when we remove a component in stack than it called as pop
+     C. isEmpty()    ->when we are verifying whether stack has element or not then it called as isEmpty
+     D. isFull()     ->when we check whether stack is full or not then it called as isFull
+     E. Peak()       ->when we are traversing a stack by restoring component is called as peak
+     F. Count()      ->To get total number of elements in the stack we use count 
+     G. Change()     ->To change the component at a specific position we used change
+     H. Top()        ->To return last inserted element without removing it
+     I. Size()       ->To return size or number of element in stack
+
+# Queue:-
+  Queue can be characterized as a arranged rundown which empower embeded task to be performed toward one side called as REAR
+  and erase activities to be performed at another end called as FRONT.
+  Queue follow FIFO, the inclusion is done from one end knowns as tail of queue.
+  
+  **Operation Of Queue
+    a. Enqueue--->
+       This activity is utilized to embedded component at backside of queue and it brings void back.
+    b. Dequeue--->
+       This activity plays out erasure from front-rear of queue.
+    c. Peek--->
+       This is third activity that profit component which is pointed by front pointer in the queue yet doesn't erase it.
+    d. isFull--->
+       When queue is totally full at that point it show flood condition.
+    e. isEmpty--->
+       When queue is unfilled.
+
+  ** Type of Queue--->
+     a. Linear queue:-
+        It is a basic type of queue where element are stored in linear manner and it has two ends front and rear end,
+        new element are inserted at rear end and removed from front end.
+
+     b. Circular queue:-
+        An circular queue is an extension of linear queue and in this front and rear end both are connected to each other
+        forming circular structure. This allow element to wrap around and reuse space at that begining of queue when it become
+        empty.
+     
+     c. Priority queue:-
+        An priority queue is type of queue where each element has a priority are removed first before lower priority
+        It allow element to insert in any order but ensure that element with priority in any order is always at the front end
+        when dequeued.
+      
+     d. Double Ended queue:-
+        A DE queue ofted called as dequeue where element can be added or remove from both side. Dequeue are more flexible than
+        reqular queue because they support operation like inserting or deleting element from both side.
+        
+
+# VECTOR:-
+  It is a dynamic array that can grow or shrink in size as needed, it's the part of STL or Standard Template Library and it is 
+  used for storing and manipulating collection of element
+  For using vector we need to declare the vector header file
+  #include<vector>
+
+  For creating vector we need to use these syntax and there are some function which can be used for vector
+  Let's understand by a simple example :-
+  #include<iostream>
+  #include<vector>
+  #include<stdlib.h>
+  using namespace std;
+  int main()
+  {  
+     Vector<int> vc;     // this is for creating vector  { Vector <data_type_name> vector_name ;}
+     
+     // adding value using push_back function
+     vc.push_back(100);
+     vc.push_back(200);
+     vc.push_back(300);
+     vc.push_back(400);
+     vc.push_back(500);
+  
+     // we can change value by accessing element using index
+     vc[0]=1000;
+     vc[1]=2000;
+     vc[2]=3000;
+     vc[3]=4000;
+     vc[4]=5000;
+
+     // for getting size we use .size() method
+     cout<<"Size of vector"<<vc.size()<<endl;
+
+     // for getting capacity we use .capacity() method
+     cout<<"Capacity of vector"<<vc.capacity()<<endl;
+
+     // printing data from vector
+     for(int i=0;i<vc.size();i++)
+       {
+          cout<<"ELEMENT OF VECTOR " << vc.[i]<<endl;
+       }  
+   
+    // for sorting data of vector we use .sort() method
+    sort(vc.begin() , vc.end());
+
+    // removing data from vector we use .pop_back() method
+    vc.pop_back();
+
+    // for clearing all elements from vector
+    vc.clear();
+
+    // for checking whether vector has element or not we use .empty() method
+    if(vc.empty())
+    { 
+       cout<<"It it empty"<<endl;
+    }
+    else
+    {
+       cout<<"It is not empty"<<endl;
+    }
+
+    return 0;
+}
+
+
+
+# Space Complexity
+  It refer to amount of memory or space required by an algorithm to solve a problem
+  It help us to understand how memory size or usage of an algorithm grows as input
+  size increase.
+  Space complexity varies from compiler to compiler and even on programming language.
+
+# Time Complexity
+  It refer as the amount of time needs to run a application or program, and it is analysed 
+  for two major reason
+  a. very large input size
+  b. wrost case scenario
+
+# ADTs
+  ADTs or Abstract Data Types Structure is complelety mathmatical model for certain class of 
+  data types that have similar behavior and it is purely theortical entities to simplify the
+  classification or evalutaion of Data Structure.
+  It is based on the process of abstraction which is a method of hiding vital info or detail from
+  user and only showing that info which is for user only.
+  Stack is one of the great example of ADTs and it based on LIFO structure.
+
+
+# TREE:-
+  It is a non linear data structure that consist of node and each node is connected by edges.
+  We can refer tree as a collection of node where a node contain data and may have the reference of 
+  next node or to it's child node.
+  Tree does not have any closed loop or cycle in their structure.
+  
+  ** Advantage of Tree:-
+  1. Provide hierachial structure
+  2. Efficently handle insertion and deletion operation
+  3. It has recurssive nature
+
+  ** Disadvantage of Tree:-
+  1. It does not provide random access of data
+  2. Require additional memory for link/pointer
+  3. It's operation are very complex to design
+
+  **IMPORTANT TERMINOLOGY OF TREE:-
+  a.Root node
+    It is top most node in the tree
+ 
+  b.Child node
+    It is the descendent node of root or any node 
+
+  c.Parent node
+    A node which is predecessor of child node
+
+  d.Leaf node
+    A node which does not have any child node
+
+  e.Internal node
+    A node which has atleast one child node
+
+  f.Sibling node
+    Node which are child node of same parental node 
+
+  g.Degree of node
+    Number of children in total is degree of node and it is represent by D()
+
+  h.Height of node
+    Maximum number of node in tree to root
+
+  i.Depth of node
+    Number of edge from root to any node
+    
+    
+
+
+ #GRAPHS:-
+ Graph are natural node that are used to represent arbitary relationship among data objects.
+ Graph contain cycle and may have several different path between pair of vertices.
+ A graph G is a structure consists of node called vertices and line joining node called as 
+ edges.
+ We use V(G) to represent vertex and E(G) for edges.
+ 
+ ** TERMINOLOGY OF GRAPHS
+     a. order of graph:-
+        The number of vertices in a graph refer to order
+        
+     b. size of graph:-
+        The number of edges in a graph refer to size
+        
+     c. Degree of vertex:-
+        MAximum No of edge connected to a vertex called as degree BFS
+        
+     d. Degree of sequence:-
+        Ascending order of degree of vertices in graph refer as degree of sequence.
+        
+ ** ADJACENCY MATRIX:-
+    We have to arrange every vertex in both row and column wise, if a vertex is connected to a edge
+    it get '1' and if not then '0' but if there is a cyclic structure there, then there will be '2'.
+    If we able to get adjcency matrix of graph we'll notice that every matrix will have '0' in its
+    principle diagonal.
+
+ ** ADJANCENY LIST:-
+    For creating adjanceny list of any graph we arrange vertex in row wise and then write those vertex which are directly 
+    connected to that vertex .
+    
+ ** BREADTH FIRST TRAVERSAL ALGORITHM:-
+    When a graph is treaversal by visiting every adjacent vertices of node vertex such traversal called as breadth first traversal
+    It also consists a searching method called as BFS or breadth first searching:-
+    BFS states that writing vertex/node in such order that "Immeditate node and their immediate node".
+    for this we'll start from source node or root node then move towards its nearby node untill we'll get a ending point.
+    This will continue till covering the last node or vertex of that graph or tree.
+    
+ 
+ ** DEPTH FIRST TRAVERSAL ALGORITHM:-
+    
